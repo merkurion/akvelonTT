@@ -9,7 +9,8 @@ public class BinaryMatrixServiceTest {
 
 	@Test
 	public void testBinaryMatrixFromTask() {
-		byte[][] binaryMatrixFromTask = {{0, 0, 0, 1, 0, 0},
+		byte[][] binaryMatrixFromTask =
+				{{0, 0, 0, 1, 0, 0},
 				{1, 0, 1, 1, 0, 1},
 				{0, 0, 0, 1, 0, 0}
 		};
