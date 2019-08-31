@@ -47,5 +47,4 @@ public class BinaryMatrixServiceImpl implements BinaryMatrixService {
 
 		return longestSequence;
 	}
-
 }

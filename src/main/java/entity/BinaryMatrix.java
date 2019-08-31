@@ -19,18 +19,20 @@ public class BinaryMatrix {
 		int rows = 0;
 		int columns = 0;
 
-		Scanner sc = new Scanner(new BufferedReader(new FileReader(fileName)));
-		while (sc.hasNextLine()) {
+		Scanner scCalcLength = new Scanner(new BufferedReader(new FileReader(fileName)));
+		while (scCalcLength.hasNextLine()) {
 			rows++;
-			String[] line = sc.nextLine().trim().split(" ");
+			String[] line = scCalcLength.nextLine().trim().split(" ");
 			if (columns == 0) {
 				columns = line.length;
 			} else if (columns != line.length) {
 				throw new IncorrectFileException();
 			}
 		}
+		scCalcLength.close();
 
 		byte[][] matrixInput = new byte[rows][columns];
+		Scanner sc = new Scanner(new BufferedReader(new FileReader(fileName)));
 		while (sc.hasNextLine()) {
 			for (int i = 0; i < matrixInput.length; i++) {
 				String[] line = sc.nextLine().trim().split(" ");
@@ -39,6 +41,7 @@ public class BinaryMatrix {
 				}
 			}
 		}
+		sc.close();
 
 		this.matrix = matrixInput;
 	}

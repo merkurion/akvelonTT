@@ -1,6 +1,8 @@
 package exceptions;
 
-public class IncorrectFileException extends RuntimeException {
+import java.io.IOException;
+
+public class IncorrectFileException extends IOException {
 	public IncorrectFileException() {
 		super("Incorrect file to load matrix from it.");
 	}
