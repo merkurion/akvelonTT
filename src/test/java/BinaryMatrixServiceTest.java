@@ -2,8 +2,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import entity.BinaryMatrix;
-import service.BinaryMatrixServiceImpl;
+import com.merkurion.entity.BinaryMatrix;
+import com.merkurion.service.BinaryMatrixServiceImpl;
 
 public class BinaryMatrixServiceTest {
 
